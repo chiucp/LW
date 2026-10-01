@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101b24">
+  <title>Last War 小隊攻略</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --ink: #f4f3eb;
+      --muted: #aebbb9;
+      --surface: #17262d;
+      --line: #33464b;
+      --accent: #b8e1c5;
+      --highlight: #f2a66a;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      color: var(--ink);
+      background-color: #101b24;
+      background-image: radial-gradient(ellipse at 12% 0%, #263b3b 0, transparent 42%),
+        linear-gradient(145deg, #101b24 35%, #1b242d 100%);
+      font-family: "Trebuchet MS", "Noto Sans TC", sans-serif;
+    }
+
+    main {
+      width: min(1440px, 100%);
+      margin: 0 auto;
+      padding: clamp(28px, 6vw, 76px) clamp(18px, 5vw, 64px) 72px;
+    }
+
+    .masthead {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 24px;
+      padding-bottom: 26px;
+      border-bottom: 1px solid var(--line);
+      margin-bottom: 30px;
+    }
+
+    .eyebrow {
+      margin: 0 0 10px;
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(30px, 5vw, 54px);
+      line-height: 1.08;
+      font-weight: 700;
+    }
+
+    .intro {
+      max-width: 310px;
+      margin: 0 0 3px;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.65;
+    }
+
+    .guides {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      align-items: start;
+      gap: 20px;
+    }
+
+    .guide {
+      min-width: 0;
+      overflow: hidden;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      transition: border-color 180ms ease, transform 180ms ease;
+    }
+
+    .guide:hover {
+      transform: translateY(-4px);
+      border-color: var(--accent);
+    }
+
+    .guide a {
+      display: block;
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .guide img {
+      display: block;
+      width: 100%;
+      height: auto;
+      background: #282d49;
+    }
+
+    .caption {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 15px 16px;
+    }
+
+    .caption h2 {
+      margin: 0;
+      font-size: 16px;
+      font-weight: 700;
+    }
+
+    .caption span {
+      color: var(--highlight);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      white-space: nowrap;
+    }
+
+    @media (max-width: 900px) {
+      .guides { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .guide:last-child { grid-column: 1 / -1; width: calc(50% - 10px); }
+    }
+
+    @media (max-width: 620px) {
+      main { padding-top: 34px; }
+      .masthead { align-items: start; flex-direction: column; gap: 14px; }
+      .intro { max-width: 440px; }
+      .guides { grid-template-columns: 1fr; gap: 16px; }
+      .guide:last-child { grid-column: auto; width: auto; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { scroll-behavior: auto !important; transition-duration: 0.01ms !important; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header class="masthead">
+      <div>
+        <p class="eyebrow">Last War · Squad Guides</p>
+        <h1>小隊攻略</h1>
+      </div>
+      <p class="intro">空軍、飛彈與坦克小隊的技能優先順序，整理在這裡。</p>
+    </header>
+
+    <section class="guides" aria-label="小隊攻略圖">
+      <article class="guide">
+        <a href="PIC/air-squad-guide.webp" target="_blank" rel="noopener">
+          <img src="PIC/air-squad-guide.webp" alt="空軍小隊技能優先順序與升星攻略" loading="lazy">
+          <div class="caption"><h2>空軍小隊</h2><span>AIR SQUAD</span></div>
+        </a>
+      </article>
+      <article class="guide">
+        <a href="PIC/missle-squad-guide.webp" target="_blank" rel="noopener">
+          <img src="PIC/missle-squad-guide.webp" alt="飛彈小隊技能優先順序與升星攻略" loading="lazy">
+          <div class="caption"><h2>飛彈小隊</h2><span>MISSILE SQUAD</span></div>
+        </a>
+      </article>
+      <article class="guide">
+        <a href="PIC/tank-squad-guide.webp" target="_blank" rel="noopener">
+          <img src="PIC/tank-squad-guide.webp" alt="坦克小隊技能優先順序與升星攻略" loading="lazy">
+          <div class="caption"><h2>坦克小隊</h2><span>TANK SQUAD</span></div>
+        </a>
+      </article>
+    </section>
+  </main>
+</body>
+</html>
